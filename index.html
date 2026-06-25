@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mobazou Developer Site</title>
+    <title>Language Redirect for GitHub Pages</title>
     <script>
-        var language = (navigator.language || navigator.userLanguage || "").toLowerCase();
-        var target = language.startsWith("ja") ? "ja/index.html" : "en/index.html";
-        window.location.replace(target + window.location.search + window.location.hash);
+        // Configuration
+        var repositoryName = 'makidenlite'; // Replace with your actual repository name
+        var supportedLanguages = ['en', 'ja'];
+        var defaultLanguage = 'en';
+
+        function getLanguage() {
+            return navigator.language || navigator.userLanguage;
+        }
+        
+        function redirect() {
+            var lang = getLanguage().toLowerCase().substr(0, 2);
+            var path = window.location.pathname;
+            
+            // Remove leading slash and repository name from the path
+            var cleanPath = path.replace(new RegExp('^/?' + repositoryName + '/?'), '');
+            
+            // Check if we're already in a language subdirectory
+            if (supportedLanguages.some(l => cleanPath.startsWith(l + '/'))) {
+                return; // Already in a language subdirectory, no need to redirect
+            }
+            
+            // Don't redirect for specific file types
+            if (cleanPath !== 'app-ads.txt') {
+                var targetLang = supportedLanguages.includes(lang) ? lang : defaultLanguage;
+                var newPath = '/' + repositoryName + '/' + targetLang + '/' + cleanPath.replace(/^\//, '');
+                window.location.href = newPath;
+            }
+        }
+        
+        // Execute redirect when DOM is ready
+        document.addEventListener('DOMContentLoaded', redirect);
     </script>
 </head>
 <body>
-    <p><a href="ja/index.html">日本語</a> / <a href="en/index.html">English</a></p>
+    <noscript>
+        <p>JavaScript is disabled. Please select a language from the following links:</p>
+        <ul>
+            <li><a href="/repository-name/en/">English</a></li>
+            <li><a href="/repository-name/ja/">日本語</a></li>
+        </ul>
+    </noscript>
 </body>
 </html>

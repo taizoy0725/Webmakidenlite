@@ -3,136 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mobazou Developer Site</title>
+    <title>Makiden Lite - Innovative Calculator App</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
+        /* CSS styles remain the same */
         body {
-            margin: 0;
-            min-height: 100vh;
-            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-            color: #24303d;
-            background: #f7f8fa;
-        }
-
-        main {
-            width: min(920px, calc(100% - 40px));
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 64px 0;
+            padding: 20px;
         }
-
-        header {
-            margin-bottom: 36px;
+        h1, h2, h3 {
+            color: #2c3e50;
         }
-
-        h1 {
-            margin: 0 0 10px;
-            font-size: 2.4rem;
-            line-height: 1.15;
-            letter-spacing: 0;
+        .feature {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
         }
-
-        .lead {
-            margin: 0;
-            color: #5f6c7b;
-            font-size: 1.05rem;
-            line-height: 1.7;
+        .download-section {
+            text-align: center;
+            margin-top: 30px;
         }
-
-        .apps {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
-        }
-
-        .app-link {
-            display: block;
-            min-height: 176px;
-            padding: 24px;
-            color: inherit;
-            text-decoration: none;
-            background: #ffffff;
-            border: 1px solid #dfe5ec;
-            border-radius: 8px;
-        }
-
-        .app-link:focus,
-        .app-link:hover {
-            border-color: #2773c8;
-            box-shadow: 0 8px 24px rgba(39, 115, 200, 0.12);
-            outline: none;
-        }
-
-        .app-name {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 1.35rem;
-            font-weight: 700;
-        }
-
-        .app-desc {
-            display: block;
-            color: #5f6c7b;
-            line-height: 1.7;
-        }
-
-        .button-text {
+        .download-button {
             display: inline-block;
-            margin-top: 20px;
-            color: #1665b7;
-            font-weight: 700;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
         }
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px; /* 必要に応じて変更可能 */
+    height: auto;
+    aspect-ratio: 9 / 16; /* 縦型動画に適したアスペクト比を指定 */
+    margin: auto;
+}
 
-        footer {
-            margin-top: 44px;
-            padding-top: 20px;
-            color: #7a8591;
-            border-top: 1px solid #dfe5ec;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 720px) {
-            main {
-                width: min(100% - 28px, 920px);
-                padding: 40px 0;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .apps {
-                grid-template-columns: 1fr;
-            }
-        }
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
     </style>
 </head>
 <body>
+    <header>
+        <h1>Rolled Paper Calculator</h1>
+    </header>
+    
     <main>
-        <header>
-            <h1>mobazou Developer Site</h1>
-            <p class="lead">Support pages for iPhone and iPad apps published by mobazou.</p>
-        </header>
-
-        <section class="apps" aria-label="Apps">
-            <a class="app-link" href="../Webmakidenlite/">
-                <span class="app-name">Rolled Paper Calculator Lite</span>
-                <span class="app-desc">A simple calculator app that keeps your calculation history like a paper roll.</span>
-                <span class="button-text">Open app page</span>
-            </a>
-
-            <a class="app-link" href="../Webfastingmanager/">
-                <span class="app-name">Fasting Manager</span>
-                <span class="app-desc">Manage your fasting timer and HealthKit health data in one app.</span>
-                <span class="button-text">Open app page</span>
-            </a>
+        <section>
+            <h2>An Innovative Calculator with History and Simplicity</h2>
+            <p>Makiden Lite is a revolutionary calculator app that combines ease of use with powerful functionality. It maintains the familiar operations of a traditional calculator while introducing a unique paper roll display for calculation history.</p>
+            <p>Recognized as one of the Best iPhone Apps of 2010 by AppBank, it has gained widespread user appreciation. Since version 7.0, it has incorporated a decimal arithmetic engine, enhancing calculation accuracy. Make your daily calculations easier and more precise.</p>
+            <p><strong>Use cases:</strong><br>Shopping expense calculations, household budget verifications, business expense calculations, educational math tool, and more.</p>
         </section>
 
-        <footer>
-            <p>&copy; 2026 mobazou. All rights reserved.</p>
-        </footer>
+        <section class="video-container">
+            <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/vCC7ZqKtxOU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            
+            <div class="feature">
+                <h3>1. Paper Roll Display</h3>
+                <p>Displays the calculation process like a paper roll, allowing you to check it at any time. You can easily review past calculation history by scrolling.</p>
+            </div>
+
+            <div class="feature">
+                <h3>2. Standard/Advanced/Note Keyboard Switching</h3>
+                <p>We've implemented three keyboard modes: Standard, Advanced, and Note. Users can easily switch between them based on their preferences and calculation needs.</p>
+                <ul>
+                    <li>Standard: Provides simple and easy-to-use basic calculator functions</li>
+                    <li>Advanced: Extended keyboard with more advanced features</li>
+                    <li>Note: Provides note-taking functionality to save and manage calculation results</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>3. Flexible Decimal Point Modes</h3>
+                <p>Three decimal point modes are available:</p>
+                <ul>
+                    <li>F (Free): No limit on decimal places</li>
+                    <li>0 (Zero): Integer-only display</li>
+                    <li>2 (Euro mode): Display up to two decimal places</li>
+                </ul>
+                <p>Easily switchable with the "dp/VAT" button (in Advanced mode).</p>
+            </div>
+
+            <div class="feature">
+                <h3>4. VAT Calculation Feature</h3>
+                <p>By long-pressing the "dp/VAT" button in Advanced mode, you can set the VAT rate. After setting, simply switch to +VAT mode with the "dp/VAT" button to automatically calculate with added tax.</p>
+            </div>
+
+            <div class="feature">
+                <h3>5. Scan Function</h3>
+                <p>Use the "SCAN" button in Advanced mode to scan numbers from receipts or price lists and automatically input them. This is particularly useful for correctly inputting large numbers, such as for tax returns.</p>
+            </div>
+
+            <div class="feature">
+                <h3>6. Advanced Calculation Functions</h3>
+                <ul>
+                    <li>Square Root Calculation: Easily calculate square roots with the "√" button.</li>
+                    <li>Sign Inversion: Switch between positive and negative numbers with the "±↻" button.</li>
+                    <li>Backspace Function: Delete from the last digit in case of input errors (Advanced mode).</li>
+                    <li>Restore Function: Restore numbers deleted by backspace (Advanced mode).</li>
+                    <li>C/AC Function: Pressing the "C/AC" button resets the input or calculation result. Long-pressing clears all content on the paper roll and saves it to Note.</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>7. Copy Function</h3>
+                <p>Use the "copy" button in Advanced mode to copy the calculation history displayed on the paper roll to the clipboard.</p>
+            </div>
+
+            <div class="feature">
+                <h3>8. Total Calculation Function</h3>
+                <p>The "=/Σ" button displays normal calculation results. In Advanced mode, long-pressing calculates the sum of all calculation results displayed on the paper roll.</p>
+            </div>
+
+            <div class="feature">
+                <h3>9. Note Function</h3>
+                <p>Save calculation results as notes for later reference or editing. Saved notes are grouped by date for easy management.</p>
+            </div>
+
+            <div class="feature">
+                <h3>10. User-Friendly Interface</h3>
+                <ul>
+                    <li>Intuitive operation method</li>
+                    <li>Clear display</li>
+                    <li>Dark mode support</li>
+                    <li>Easy switching between Standard/Advanced/Note modes</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Supported Devices</h2>
+            <p>Available on iPhone, iPad, and Mac (Apple Silicon). Provides layouts optimized for each device's screen size.</p>
+        </section>
+
+        <section>
+            <h2>Privacy and Advertising</h2>
+            <p>We respect user privacy and have implemented App Tracking Transparency. We display personalized or non-personalized ads based on the user's choice.</p>
+        </section>
+
+        <section class="download-section">
+            <p>Download from the App Store and start a new calculation experience!</p>
+            <a href="https://apps.apple.com/app/id390235996" class="download-button">Download on the App Store</a>
+        </section>
     </main>
+
+
+    <footer>
+        <p>© 2024 mobazou. All rights reserved.</p>
+        <p>
+            <a href="/makidenlite/en/privacy-policy.html">Privacy Policy</a> | 
+            <a href="/makidenlite/en/terms.html">Terms of Use</a> | 
+            <a href="https://www.facebook.com/mobazoiPhoneApp">Contact Us</a>
+        </p>
+    </footer>
 </body>
 </html>
